@@ -14,6 +14,7 @@ win = 0
 def win_or(now_x, now_y):
     """
     判断赢家是否存在
+    (恩,这个方法太差劲了..之后还要再想想)
     :param now_x: 最后点击的坐标X
     :param now_y: 最后点击的坐标Y
     :return: 胜利者的颜色(字符)
@@ -198,10 +199,7 @@ def main():
     win = 0
     draw_chessboard()
     chess_place_def()
-    # print(chess_place)
-    # ===========
     count_mark("5-maker-game", -2)
-    # ===========
     fig.canvas.mpl_connect("button_press_event", on_press)
     plt.show()
 
@@ -216,4 +214,5 @@ def count_mark(title, lift):
              )
 
 
-main()
+if __name__ == '__main__':
+    main()
